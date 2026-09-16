@@ -1,13 +1,13 @@
-
 # Social Decay GUI
 
-Desktop application for running and exploring the social-residue analysis described in the project report.
+A Streamlit viewer built specifically around the social-residue result in the report: pick any session, watch the neural-state trajectory move through PRE, SOCIAL, and POST alongside the synced video and DLC skeleton, and see exactly where the "fading" happens in time. This is the tool we used to sanity-check individual sessions while writing the report, including the M2_Female_1 walkthrough.
 
 ## What it does
 
-- **Run experiment**: train a PRE-vs-SOCIAL classifier (mean firing rate or covariance-geometry features) on any session, with configurable windowing and neuron-subset options; view the POST decay curve in real time
-- **Browse history**: browse all saved classifier runs, compare sessions and feature types side by side
-- **Covariance explorer**: build correlation matrices and diffusion-map embeddings for any session, visualize how population covariance structure moves through PRE, SOCIAL, and POST phases
+- **3D PCA neural trajectory** for the selected session, colored by phase, with vocalization events marked
+- **Synced video + DLC skeleton overlay** panel, playhead-linked to the trajectory
+- **PC1 vs PC2 / PC2 vs PC3 / PC3 vs PC1** projections, updated live as you scrub through the session
+- **Full-session vocalization timeline** strip
 
 https://github.com/user-attachments/assets/fe37da07-3d25-4948-a2d8-f48abd12a084
 
@@ -15,7 +15,5 @@ https://github.com/user-attachments/assets/fe37da07-3d25-4948-a2d8-f48abd12a084
 
 ```bash
 pip install -r requirements.txt
-python -m social_decay_gui
+streamlit run streamlit_viewer.py
 ```
-
-A window will open with three tabs: *Run experiment*, *Browse history*, and *Covariance explorer*.

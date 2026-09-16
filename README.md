@@ -20,9 +20,9 @@
 
 ## Interactive GUIs
 
-For your convenience, we also include two Streamlit-based GUI applications we developed and used throughout this project:
+For your convenience, we also include two GUI applications we developed and used throughout this project:
 
-| Folder | Description |
-|--------|-------------|
-| [`Exploration GUI/`](Exploration%20GUI) | General-purpose data exploration tool for browsing sessions, raster plots, trajectories, and neural activity |
-| [`Social Decay  GUI/`](Social%20Decay%20%20GUI) | Focused tool for the social-residue analysis: classifier results, diffusion-map embeddings, and decay curves across sessions |
+| Folder | Framework | Description |
+|--------|-----------|-------------|
+| [`Exploration GUI/`](Exploration%20GUI) | Tkinter desktop app | General-purpose data exploration tool for browsing sessions: neural trajectories, DLC skeleton overlay, vocalizations, and behavior ethogram |
+| [`Social Decay  GUI/`](Social%20Decay%20%20GUI) | Streamlit web app | Session-level viewer for the social-residue result: neural trajectory through PRE/SOCIAL/POST synced to video, used to sanity-check the report's per-session findings |
